@@ -1,0 +1,154 @@
+<html> 
+   <head>
+        <title>Registration Page</title>
+        <link rel="stylesheet" href="styling.css">
+   </head>
+   <body>
+       <div class="logincard">
+    <center> 
+    <h2  style="padding-top: 30px; color:blue">REGISTRATION PAGE</h2>
+    <table border="0">
+    <tr><td>  
+    <form name="f1" action="" method="post" onsubmit="">
+    <table cellspacing="10" cellpadding="5">
+     <tr><td>NAME</td><td><input type="text" id="username" size="30" name="uname"/></td></tr>
+     <tr><td>PASSWORD</td><td><input type="password" id="password" size="30" name="pass"/></td></tr>
+     <tr><td>E-MAIL ID</td><td><input type="text" size="30" id="email" name="email"/></td></tr>
+     <tr><td> PHONE NUMBER</td><td><input type="text" id="mobile" size="10" name="phone"/></td></tr>
+     <tr><td>GENDER</td><td><input type="radio" name="gen" value="m" />MALE
+     <input type="radio" name="gen" value="f" />FEMALE </td></tr>
+     <tr><td>DATE OF BIRTH</td>
+     <td><select name="day">
+     <option value="day">DAY</option>
+    <option value="1">1</option>
+    <option value="2">2</option>
+    <option value="3">3</option>
+    <option value="4">4</option> 
+    <option value="5">5</option>
+    <option value="6">6</option>
+    <option value="7">7</option>
+    <option value="8">8</option>
+    <option value="9">9</option>
+    <option value="10">10</option>
+    <option value="11">11</option>
+    <option value="12">12</option>
+    <option value="13">13</option>
+    <option value="14">14</option>
+    <option value="15">15</option>
+    <option value="16">16</option>
+    <option value="17">17</option>
+    <option value="18">18</option>
+    <option value="19">19</option>
+    <option value="20">20</option>
+    <option value="21">21</option>
+    <option value="22">22</option>
+    <option value="23">23</option>
+    <option value="24">24</option>
+    <option value="25">25</option>
+    <option value="26">26</option>
+    <option value="27">27</option>
+    <option value="28">28</option>
+    <option value="29">29</option>
+    <option value="30">30</option>
+    <option value="31">31</option>
+    </select>
+    <select name="month">
+    <option value="month">MONTH</option>
+    <option value="jan">JANUARY</option>
+    <option value="feb">FEBRUARY</option>
+    <option value="mar">MARCH</option>
+    <option value="apr">APRIL</option>
+    <option value="may">MAY</option>
+    <option value="jun">JUNE</option>
+    <option value="jul">JULY</option>
+    <option value="aug">AUGUST</option>
+    <option value="sep">SEPTEMBER</option>
+    <option value="oct">OCTOBER</option>
+    <option value="nov">NOVEMBER</option>
+    <option value="dec">DECEMBER</option>
+    </select>
+    <select name="year">
+    <option value="2000">2000</option>
+    <option value="2001">2001</option>
+    <option value="2002">2002</option> 
+    <option value="2003">2003</option>
+    <option value="2004">2004</option>
+    <option value="2005">2005</option>
+    <option value="2006">2006</option>
+    <option value="2007">2007</option>
+    <option value="2008">2008</option>
+    <option value="2009">2009</option>
+    <option value="2010">2010</option>
+    </select></td></tr>
+    <tr>
+    <td>ADDRESS</td>
+    <td><textarea name="addr" cols="25" rows="5"></textarea></td></tr>
+    <tr><td colspan="2" align="center"><button onclick=validate() class="submitbtn"> Submit </button>
+    </td>
+    </tr>
+    </table>
+    </form>
+    </td></tr></table>
+    </center>
+    </div>
+    <script> 
+        function validate() 
+        {
+        let username = document.getElementById('username').value 
+        let password = document.getElementById('password').value 
+        let email = document.getElementById('email').value
+        let mobile = document.getElementById('mobile').value 
+        let i=0; 
+        let j=0; 
+        let k=0; 
+        for (let index = 0; index < password.length; index++) { 
+        var element = password[index]; 
+        if(element.charCodeAt(0)>=65 && 
+       element.charCodeAt(0)<=90){ 
+        j=1 
+        } 
+        if(element.charCodeAt(0)>=58 && 
+       element.charCodeAt(0)<=64){ 
+        k=1 
+        } 
+        if(element.charCodeAt(0)>=48 && 
+       element.charCodeAt(0)<=57){ 
+        i=1 
+        } 
+        } 
+        if(username.length<6){ 
+        alert("username length is not sufficient") 
+        location.reload() 
+        } 
+        else if(password.length<8){ 
+        alert("password length is not sufficient") 
+        location.reload() 
+        } 
+    else if(j==0){ 
+    alert("Password should must have a capital letter") 
+    location.reload() 
+    } 
+    else if(k==0){ 
+    alert("Password should must have a special symbol") 
+    location.reload() 
+    } 
+    else if(i==0){ 
+    alert("Password should must have a number") 
+    location.reload() 
+    } 
+    else if(!email.includes("@gmail.com")){ 
+    alert("Enter correct email") 
+    location.reload() 
+    } 
+    else if(!(mobile.charCodeAt(0)>=54 && mobile.charCodeAt(0)<=57)){ 
+    alert("Enter correct number") 
+    location.reload() 
+    } 
+    else if(mobile.length!=10){ 
+    alert("Longer/shorter Number is given") 
+    location.reload() 
+    } 
+    } 
+    </script>  
+    </body>
+   </html>

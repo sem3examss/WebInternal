@@ -1,0 +1,84 @@
+<html> 
+<head>
+<title>Login Page</title>
+<link rel="stylesheet" href="styling.css"> 
+<style> 
+button { 
+        width: 15%;  
+        cursor: pointer; 
+        } 
+ input[type=text], input[type=password] { 
+        width: 20%; 
+        margin: 8px;
+        padding: 12px 20px; 
+        box-sizing: border-box; 
+    }
+ button:hover { 
+        opacity: 0.9; 
+    } 
+</style> 
+</head>  
+<body>  
+    <div class="logincard">
+        <center>
+    <h2  class="heading" style="padding-top: 20px;">LOGIN FORM</h2>
+     <label class="txt">Username:</label> 
+             <input type="text" id="username" placeholder="Enter Username" name="username" required>
+            <br/>
+            <label class="txt">Password:</label> 
+            <input type="password" id="password" placeholder="Enter Password" name="password" required>
+            <br/> <br/>
+            <button type="submit" class="submitbtn" onclick=validate()>submit</button>
+            <br/>
+            <a href="forgotpassword.html">Forget Password? </a> 
+            <br/>
+            <a href="register.html">Sign Up</a> 
+        </center>
+    </div>
+    <script> 
+        function validate() { 
+        let username = document.getElementById('username').value 
+        let password = document.getElementById('password').value 
+        let i=0; 
+        let j=0; 
+        let k=0; 
+        for (let index = 0; index < password.length; index++) {
+            var element = password[index]; 
+ if(element.charCodeAt(0)>=65 && 
+element.charCodeAt(0)<=90){ 
+ j=1 
+ } 
+ if(element.charCodeAt(0)>=58 && 
+element.charCodeAt(0)<=64){ 
+ k=1 
+ } 
+ if(element.charCodeAt(0)>=48 && 
+element.charCodeAt(0)<=57){ 
+ i=1 
+ } 
+ 
+ } 
+ if(username.length<6){ 
+ alert("username length is not sufficient") 
+ location.reload() 
+ } 
+ else if(password.length<8){ 
+ alert("password length is not sufficient") 
+ location.reload() 
+ } 
+ else if(j==0){ 
+ alert("Password must have a capital letter") 
+ location.reload() 
+ } 
+ else if(k==0){ 
+ alert("Password must have a special symbol") 
+ location.reload() 
+} 
+else if(i==0){ 
+alert("Password must have a number") 
+location.reload() 
+} 
+} 
+</script> 
+</body>   
+</html>

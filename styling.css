@@ -1,0 +1,33 @@
+.bg {
+    background-color: rgb(201, 209, 92);
+    background-size: 100vh;
+}
+.submitbtn {
+    background-color: #f19116;
+    color: #ffff;
+    margin: 15px;
+    border-radius: 23px;
+    border:0px;
+    width: 125px;
+}
+.heading{
+    color: #0f0e46;
+    font-size: 25px;
+}
+
+.txt {
+    color: #0f0e46;
+    font-size: 15px;
+}
+td{
+    color: #180349;
+    font-size: 15px;
+}
+.logincard{
+    background-color: rgb(131, 196, 216);
+    border-radius: 25px;
+    font-family: Bree Serif; 
+    display:grid; 
+    width: 400px; 
+    margin-left:300px;
+}

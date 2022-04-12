@@ -1,0 +1,43 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<xs:schema xmlns:xs="http://www.w3.org/2001/XMLSchema"
+targetNamespace="http://www.javatpoint.com"
+xmlns="http://www.javatpoint.com"
+elementFormDefault="qualified">
+<xs:element name="college">
+    <xs:complexType>
+        <xs:sequence>
+            <xs:element name="teaching" type="teachingtype"></xs:element>
+            <xs:element name="nonteaching" type="nonteachingtype"></xs:element>
+            <xs:element name="student" type="studenttype"></xs:element>
+        </xs:sequence>
+    </xs:complexType>
+</xs:element>
+<xs:complexType name="teachingtype">
+    <xs:sequence>
+        <xs:element name="name" type="xs:string"></xs:element>
+        <xs:element name="id" type="myId"></xs:element>
+        <xs:element name="department" type="xs:string"></xs:element>
+    </xs:sequence>
+</xs:complexType>
+<xs:complexType name="nonteachingtype">
+    <xs:sequence>
+        <xs:element name="name" type="xs:string"></xs:element>
+        <xs:element name="id" type="xs:integer"></xs:element>
+    </xs:sequence>
+</xs:complexType>
+<xs:complexType name="studenttype">
+    <xs:sequence>
+        <xs:element name="name" type="xs:string"></xs:element>
+        <xs:element name="id" type="xs:integer"></xs:element>
+        <xs:element name="department" type="xs:string"></xs:element>
+        <xs:element name="year" type="xs:integer"></xs:element>
+        <xs:element name="section" type="xs:integer"></xs:element>
+    </xs:sequence>
+</xs:complexType>
+<xs:simpleType name="myId">
+    <xs:restriction base="xs:integer">
+        <xs:minInclusive value="1"></xs:minInclusive>
+        <xs:maxInclusive value="1000000"></xs:maxInclusive>
+    </xs:restriction>
+</xs:simpleType>
+</xs:schema>

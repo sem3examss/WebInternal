@@ -1,0 +1,13 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!ELEMENT college (teaching,nonteaching,student) > 
+<!ELEMENT teaching (name+,id+,department+) >
+<!ELEMENT nonteaching (name+,id+) >
+<!ELEMENT student (name+,id+,department+,year,section) >
+<!ELEMENT name (#PCDATA) >
+<!ELEMENT id (#PCDATA) >
+<!ELEMENT department (#PCDATA) >
+<!ELEMENT year (#PCDATA) >
+<!ELEMENT section (#PCDATA) >
+<!ATTLIST name type CDATA "Name" >
+<!ATTLIST teaching tid ID #REQUIRED >
+<!ATTLIST nonteaching ntid ID #REQUIRED>

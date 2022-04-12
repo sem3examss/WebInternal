@@ -1,0 +1,20 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE college SYSTEM "scenerio1.dtd">
+<college>
+    <teaching tid="faculty" >
+        <name>Akhila</name>
+        <id>100</id>
+        <department>CSE</department>
+    </teaching>
+    <nonteaching ntid="not_faculty">
+        <name>Krishna</name>
+        <id>200</id>
+    </nonteaching>
+    <student>
+        <name>Manvitha</name>
+        <id>20</id>
+        <department>CSE</department>
+        <year>3</year>
+        <section>4</section>
+    </student>
+</college>

@@ -1,0 +1,32 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<?xml-stylesheet type="text/xsl" href="format.xsl" ?> 
+<college>
+    <student>
+        <name>Manvitha</name>
+        <id>19131A05Q6</id>
+        <department>CSE</department>
+        <year>3</year>
+	    <section>4</section>
+    </student>
+    <student>
+        <name>Sudheera</name>
+        <id>19131a0820</id>
+        <department>Chem</department>
+        <year>3</year>
+	    <section>1</section>
+    </student>
+    <student>
+        <name>Barghavi</name>
+        <id>19131A1234</id>
+        <department>Mech</department>
+        <year>3</year>
+	    <section>2</section>
+    </student>
+    <student>
+        <name>jahnavi gayatri</name>
+        <id>19131A0431</id>
+        <department>ECE</department>
+        <year>3</year>
+	    <section>3</section>
+    </student>
+</college>

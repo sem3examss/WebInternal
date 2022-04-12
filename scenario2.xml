@@ -1,0 +1,22 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<college
+xmlns="http://www.javatpoint.com" 
+xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" 
+xsi:schemaLocation="http://www.javatpoint.com scenario2.xsd"> 
+    <teaching>
+        <name>Akhila</name>
+        <id>100</id>
+        <department>CSE</department>
+    </teaching>
+    <nonteaching>
+        <name>Krishna</name>
+        <id>200</id>
+    </nonteaching>
+    <student>
+        <name>Manvitha</name>
+        <id>20</id>
+        <department>CSE</department>
+        <year>3</year>
+        <section>4</section>
+    </student>
+</college>
